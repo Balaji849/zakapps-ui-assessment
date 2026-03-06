@@ -1,0 +1,259 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Products – Abokichi</title>
+    <link rel="stylesheet" href="./css/products.css" />
+    <script src="./js/products.js"></script>
+  </head>
+  <body>
+    <div class="login-reg">
+      <div class="left-items">
+        <div class="currency">
+          <span>USD</span
+          ><img
+            src="https://img.icons8.com/ios-glyphs/20/ffffff/expand-arrow--v1.png"
+            alt=""
+          />
+        </div>
+        <div class="store">
+          <img
+            src="https://img.icons8.com/material-sharp/20/ffffff/marker.png"
+            alt=""
+          /><span>Stores</span>
+        </div>
+      </div>
+      <div class="right-item"><span>Login / Register</span></div>
+    </div>
+
+    <nav class="navbar">
+      <a
+        href="index.html"
+        class="logo"
+        style="text-decoration: none; color: inherit"
+        >ABOKICHI</a
+      >
+      <ul class="menu">
+        <li class="menu-1">
+          Shop
+          <img
+            src="https://img.icons8.com/ios-glyphs/20//expand-arrow--v1.png"
+            alt=""
+          />
+        </li>
+        <li>Our story</li>
+        <li>Recipes</li>
+        <li>Contact</li>
+      </ul>
+      <div class="icons">
+        <img src="https://img.icons8.com/ios-glyphs/25/search--v1.png" />
+        <img src="https://img.icons8.com/material-outlined/24/filled-like.png" />
+        <img src="https://img.icons8.com/ios-glyphs/25/shopping-bag.png" />
+      </div>
+    </nav>
+
+    <div class="page-hero">
+      <img
+        src="https://images.unsplash.com/photo-1614803556060-4a8279e6fd2f?w=1400&auto=format&fit=crop"
+        alt="PRODUCTS"
+      />
+      <h1>PRODUCTS</h1>
+    </div>
+
+    <!-- TOOLBAR -->
+    <div class="toolbar">
+      <div class="toolbar-left">
+        <button class="filter-btn" id="toggleFilter">☰ Filter</button>
+        <span class="product-count" id="productCount">Products (18)</span>
+        <div class="view-toggle">
+          <button class="active" id="gridBtn" title="Grid view">⊞</button>
+          <button id="listBtn" title="List view">☰</button>
+        </div>
+      </div>
+      <div class="toolbar-right">
+        <label>Sort By:</label>
+        <select id="sortSelect">
+          <option value="default">Featured</option>
+          <option value="az">Alphabetically, A–Z</option>
+          <option value="za">Alphabetically, Z–A</option>
+          <option value="low">Price: Low to High</option>
+          <option value="high">Price: High to Low</option>
+          <option value="rating">Best Rated</option>
+        </select>
+      </div>
+    </div>
+
+    <!-- FILTER PANEL (horizontal, above products) -->
+    <div class="filter-panel" id="filterPanel">
+      <div class="filter-panel-inner">
+        <div class="filter-group">
+          <h4>Category</h4>
+          <label
+            ><input type="checkbox" data-filter="category" value="Condiments" />
+            Condiments</label
+          >
+          <label
+            ><input type="checkbox" data-filter="category" value="Soups" />
+            Soups</label
+          >
+          <label
+            ><input type="checkbox" data-filter="category" value="Tea" /> Tea &
+            Matcha</label
+          >
+          <label
+            ><input type="checkbox" data-filter="category" value="Sets" /> Gift
+            Sets</label
+          >
+          <label
+            ><input type="checkbox" data-filter="category" value="Snacks" />
+            Snacks</label
+          >
+        </div>
+
+        <div class="filter-group">
+          <h4>Dietary</h4>
+          <label
+            ><input type="checkbox" data-filter="tag" value="vegan" />
+            Vegan</label
+          >
+          <label
+            ><input type="checkbox" data-filter="tag" value="organic" />
+            Organic</label
+          >
+          <label
+            ><input type="checkbox" data-filter="tag" value="gluten-free" />
+            Gluten-Free</label
+          >
+          <label
+            ><input type="checkbox" data-filter="tag" value="keto" />
+            Keto</label
+          >
+          <label
+            ><input type="checkbox" data-filter="tag" value="non-gmo" />
+            Non-GMO</label
+          >
+        </div>
+
+        <div class="filter-group">
+          <h4>Brand</h4>
+          <label
+            ><input type="checkbox" data-filter="brand" value="OKAZU" />
+            OKAZU</label
+          >
+          <label
+            ><input type="checkbox" data-filter="brand" value="ABO Matcha" />
+            ABO Matcha</label
+          >
+          <label
+            ><input type="checkbox" data-filter="brand" value="MisoMaster" />
+            MisoMaster</label
+          >
+          <label
+            ><input type="checkbox" data-filter="brand" value="Abokichi" />
+            Abokichi</label
+          >
+        </div>
+
+        <div class="filter-group">
+          <h4>Availability</h4>
+          <label
+            ><input type="checkbox" data-filter="tag" value="in-stock" /> In
+            Stock</label
+          >
+          <label
+            ><input type="checkbox" data-filter="tag" value="sale" /> On
+            Sale</label
+          >
+        </div>
+
+        <div class="filter-group">
+          <h4>Rating</h4>
+          <label
+            ><input type="checkbox" data-filter="rating" value="4.5" /> ★★★★★
+            4.5+</label
+          >
+          <label
+            ><input type="checkbox" data-filter="rating" value="4" /> ★★★★☆
+            4.0+</label
+          >
+          <label
+            ><input type="checkbox" data-filter="rating" value="3.5" /> ★★★½☆
+            3.5+</label
+          >
+          <label
+            ><input type="checkbox" data-filter="rating" value="3" /> ★★★☆☆
+            3.0+</label
+          >
+        </div>
+
+        <div class="filter-actions">
+          <button class="clear-filters" id="clearFilters">Clear All</button>
+        </div>
+      </div>
+    </div>
+
+    <!-- ACTIVE PILLS -->
+    <div class="active-filters" id="activePills"></div>
+
+    <!-- PRODUCTS -->
+    <div class="products-area">
+      <div class="products-grid" id="productsGrid"></div>
+    </div>
+
+    <footer>
+      <!-- FOOTER LINKS -->
+      <div class="footer-links">
+        <div class="footer-left">
+          <div class="links">
+            <h4>LINKS</h4>
+            <div class="link-items">
+              <p>About us</p>
+              <p>Contact us</p>
+              <p>Customer Service</p>
+              <p>FAQs</p>
+              <p>Sitemap</p>
+            </div>
+          </div>
+
+          <div class="links">
+            <h4>INFORMATION</h4>
+            <div class="link-items">
+              <p>Terms of Service</p>
+              <p>Refund policy</p>
+              <p>Press</p>
+            </div>
+          </div>
+        </div>
+        <div class="payments">
+          <img src="./Assets/visa-logo.png" />
+          <img src="./Assets/mastercard-logo.png" />
+          <img src="https://img.icons8.com/ios-filled/50/apple-pay.png" />
+          <img src="https://img.icons8.com/color/48/amex.png" />
+        </div>
+      </div>
+
+      <!-- BOTTOM BAR -->
+      <div class="footer-bottom">
+        <div class="social">
+          <img
+            src="https://img.icons8.com/ios-filled/25/ffffff/facebook--v1.png"
+          />
+          <img src="https://img.icons8.com/ios-filled/25/ffffff/twitter.png" />
+          <img
+            src="https://img.icons8.com/ios-filled/25/ffffff/instagram-new.png"
+          />
+          <img
+            src="https://img.icons8.com/ios-filled/25/ffffff/youtube-play.png"
+          />
+          <img
+            src="https://img.icons8.com/ios-filled/25/ffffff/pinterest.png"
+          />
+          <img src="https://img.icons8.com/ios-filled/25/ffffff/linkedin.png" />
+        </div>
+
+        <p>© 2021 Abokichi.</p>
+      </div>
+    </footer>
+  </body>
+</html>
